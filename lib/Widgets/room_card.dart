@@ -62,57 +62,17 @@ class _RoomCardState extends State<RoomCard> {
 
   Future openDialog() => showDialog(
         context: context,
-        builder: (context) => Center(
-          child: Container(
+        builder: (context) => Material(
+          child: Center(
+            child: Container(
               height: 400,
               width: 200,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: SliderTheme(
-                data: SliderThemeData(
-                  trackHeight: 100,
-                  thumbShape: SliderComponentShape.noThumb,
-                  overlayShape: SliderComponentShape.noOverlay,
-                  valueIndicatorShape: SliderComponentShape.noOverlay,
-                  //trackShape: RectangularSliderTrackShape(),
-                  trackShape: RoundedRectSliderTrackShape(),
-                ),
-                child: Container(
-                  height: 380,
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: Stack(
-                          children: [
-                            RotatedBox(
-                              quarterTurns: 3,
-                              child: Slider(
-                                value: value,
-                                min: 0,
-                                max: 100,
-                                divisions: 100,
-                                onChanged: (value) =>
-                                    setState(() => this.value = value),
-                              ),
-                            ),
-                            Center(
-                              child: Text(
-                                "",
-                                //"${value.round()}",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              )),
+              child: CustomSlider(name: ""),
+            ),
+          ),
         ),
       );
 }
