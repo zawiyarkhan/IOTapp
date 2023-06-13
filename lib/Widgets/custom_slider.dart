@@ -46,7 +46,7 @@ class _CustomSliderState extends State<CustomSlider> {
                   ),
                   Center(
                     child: Text(
-                      "${value.round()}",
+                      "${value.round()}%",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,

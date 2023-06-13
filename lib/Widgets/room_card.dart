@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iot_app/Widgets/custom_slider.dart';
 
 class RoomCard extends StatefulWidget {
+  String room;
   String name;
   Icon showIcon;
   Widget interact;
@@ -16,7 +17,8 @@ class RoomCard extends StatefulWidget {
       {super.key,
       required this.name,
       required this.interact,
-      required this.showIcon});
+      required this.showIcon,
+      required this.room});
 
   @override
   State<RoomCard> createState() => _RoomCardState();
@@ -70,7 +72,7 @@ class _RoomCardState extends State<RoomCard> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: CustomSlider(name: ""),
+              child: CustomSlider(name: widget.room),
             ),
           ),
         ),

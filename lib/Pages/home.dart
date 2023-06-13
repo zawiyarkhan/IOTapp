@@ -20,7 +20,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  String? value = 'Bedroom';
+  String value = 'Bedroom';
   bool status = true;
   final rooms = ['Bedroom', 'Living Room', 'Lounge', 'Washroom', 'Kitchen'];
 
@@ -99,7 +99,7 @@ class _HomepageState extends State<Homepage> {
                             value: value,
                             items: rooms.map(menuItem).toList(),
                             onChanged: (value) => setState(() {
-                                  this.value = value;
+                                  this.value = value!;
                                 })),
                       ),
                     )
@@ -133,6 +133,7 @@ class _HomepageState extends State<Homepage> {
                                   },
                                 )
                               }),
+                      room: value,
                     ),
                     RoomCard(
                       name: "Speakers",
@@ -146,6 +147,7 @@ class _HomepageState extends State<Homepage> {
                         CupertinoIcons.headphones,
                         size: 35,
                       ),
+                      room: value,
                     )
                   ],
                 ),
