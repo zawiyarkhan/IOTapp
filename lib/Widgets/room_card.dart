@@ -37,7 +37,7 @@ class _RoomCardState extends State<RoomCard> {
         openDialog();
       },
       child: Container(
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
         height: 120,
         width: width / 2.5,
         decoration: BoxDecoration(
@@ -50,7 +50,7 @@ class _RoomCardState extends State<RoomCard> {
               children: [widget.showIcon, widget.interact],
             ),
             SizedBox(
-              height: 15,
+              height: 5,
             ),
             Text(
               widget.name,

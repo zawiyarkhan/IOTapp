@@ -39,7 +39,7 @@ class _HomepageState extends State<Homepage> {
                     "My Home",
                     style: GoogleFonts.notoSans(
                       fontSize: 25,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Icon(
@@ -48,7 +48,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ],
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 30),
               WeatherCard(),
               SizedBox(height: 40),
               Padding(
@@ -59,13 +59,13 @@ class _HomepageState extends State<Homepage> {
                     Text(
                       "Devices",
                       style: GoogleFonts.notoSans(
-                          fontSize: 22, fontWeight: FontWeight.w600),
+                          fontSize: 22, fontWeight: FontWeight.w500),
                     ),
                     Text(
                       "See All",
                       style: GoogleFonts.notoSans(
                         fontSize: 17,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
                         color: Colors.blue,
                       ),
                     ),
@@ -77,7 +77,7 @@ class _HomepageState extends State<Homepage> {
               ),
               DevicesList(),
               SizedBox(
-                height: 40,
+                height: 30,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -87,7 +87,7 @@ class _HomepageState extends State<Homepage> {
                     Text(
                       "Rooms",
                       style: GoogleFonts.notoSans(
-                          fontSize: 22, fontWeight: FontWeight.w600),
+                          fontSize: 22, fontWeight: FontWeight.w500),
                     ),
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 10),
@@ -107,7 +107,7 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 6,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
